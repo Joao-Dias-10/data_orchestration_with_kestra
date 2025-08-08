@@ -1,0 +1,9 @@
+kestra:
+  repository:
+    type: h2
+  queue:
+    type: h2
+  storage:
+    type: local
+    local:
+      base-path: "/app/storage"

@@ -120,5 +120,3 @@ triggers:
 4.  Cole o caminho completo do script que você deseja executar (ex: `C:\kestra\outra_pasta\outro_script.py`).
 5.  Clique em "Execute" novamente.
 
-# data_orchestration_with_kestra
-# data_orchestration_with_kestra

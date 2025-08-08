@@ -1,0 +1,13 @@
+services:
+  kestra:
+    image: kestra/kestra:latest-full
+    command: server standalone --config /app/config/kestra.yml
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./kestra.yml:/app/config/kestra.yml
+      - kestra_data:/app/storage
+      - C:\kestra:/kestra_pc
+
+volumes:
+  kestra_data:

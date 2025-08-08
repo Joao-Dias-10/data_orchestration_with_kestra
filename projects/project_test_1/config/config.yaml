@@ -1,0 +1,22 @@
+id: python_traduz_caminho_windows
+namespace: company.team
+
+tasks:
+  - id: executar_script_windows_em_linux
+    type: io.kestra.plugin.scripts.shell.Commands
+    
+    taskRunner: 
+      type: io.kestra.plugin.core.runner.Process
+      
+    commands:
+      # O comando abaixo pega o caminho do Windows e o converte para um
+      # caminho válido dentro do container Linux antes de executar.
+      - >
+        python /kestra_pc/projects/project_test_1/app.py
+
+# --- SEÇÃO DE AGENDAMENTO ADICIONADA ---
+triggers:
+  - id: agendamento_as_14_25
+    type: io.kestra.plugin.core.trigger.Schedule
+    # Expressão Cron para "às 14:25, todos os dias"
+    cron: "35 14 * * *"
