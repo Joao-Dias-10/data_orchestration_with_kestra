@@ -105,13 +105,6 @@ triggers:
 
 ```
 
-### Como Funciona a "Tradução" no Comando:
-
--   **`inputs.caminho_windows`**: Pega o texto que o usuário digitou (ex: `C:\kestra\meu_script.py`).
--   **`| replace({'C:\\kestra\\': '/kestra_pc/'})`**: Substitui a parte inicial do caminho (`C:\kestra\`) pelo "apelido" que criamos no Docker (`/kestra_pc/`).
--   **`| replace({'\\': '/'})`**: Troca todas as barras invertidas (`\`) restantes por barras normais (`/`).
--   **Resultado Final:** O Kestra executa um comando limpo e válido para o ambiente Linux, como `python /kestra_pc/meu_script.py`.
-
 ### Passo 3: Executando o Fluxo
 
 1.  Salve o fluxo.
